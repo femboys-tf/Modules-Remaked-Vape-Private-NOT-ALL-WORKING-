@@ -1,0 +1,467 @@
+-- Public Custom Capybara Modules By Ham#4565 --
+repeat task.wait() until game:IsLoaded()
+repeat task.wait() until shared.GuiLibrary
+local GuiLibrary = shared.GuiLibrary
+local ScriptSettings = {}
+local UIS = game:GetService("UserInputService")
+local COB = function(tab, argstable) 
+    return GuiLibrary["ObjectsThatCanBeSaved"][tab.."Window"]["Api"].CreateOptionsButton(argstable)
+end
+
+
+function notify(text)
+    local frame = GuiLibrary["CreateNotification"]("Capybara V1 Notification", text, 5, "assets/WarningNotification.png")
+    frame.Frame.Frame.ImageColor3 = Color3.fromRGB(255, 64, 64)
+end
+function boxnotify(text)
+    if messagebox then
+        messagebox(text, "Capybara V1", 0)
+     end
+end
+
+local AnticheatDisabler = COB("Utility", {
+    Name = "AC Disabler",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = false
+})
+
+local AnticheatDisabler = COB("Utility", {
+    Name = "CannonExploit",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = false
+})
+
+local AnticheatDisabler = COB("World", {
+    Name = "funny",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = false
+})
+
+local AnticheatDisabler = COB("World", {
+    Name = "ItemFlood",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = false
+})
+
+local AnticheatDisabler = COB("World", {
+    Name = "GeneratorDisabler",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = false
+})
+
+local AnticheatDisabler = COB("World", {
+    Name = "Auto Win",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = "Automaticlly Wins The Game."
+})
+
+local AnticheatDisabler = COB("Blatant", {
+    Name = "AutoWin",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = "Automaticlly Wins The Game."
+})
+
+local AnticheatDisabler = COB("Blatant", {
+    Name = "AutoWinTP",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = "Automaticlly Wins The Game."
+})
+
+COB("Blatant", {
+    Name = "FunnyFly",
+	HoverText = "hehe haha",
+    Function = function(v)
+        longjumpval = v
+        if longjumpval then
+			workspace.Gravity = 55
+            spawn(function()
+                repeat
+                    if (not longjumpval) then return end
+                  game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Freefall")
+					wait(0.000000000000001)
+                   game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Running")
+					wait(0.000000000000001)
+                  game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Climbing")
+					wait(0.000000000000001)
+                   game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Swimming")
+					wait(0.000000000000001)
+					game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+					wait(0.000000000000001)
+                  game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Landed")
+					wait(0.000000000000001)
+					game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Freefall")
+					wait(0.000000000000001)
+					game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Landed")
+					wait(0.000000000000001)
+					game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Freefall")
+					wait(0.000000000000001)
+                   game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Freefall")
+					wait(0.000000000000001)
+					 game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Landed")
+					wait(0.000000000000001)
+					 game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Swimming")
+					wait(0.000000000000001)
+					 game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Swimming")
+					wait(0.000000000000001)
+					 game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Landed")
+					wait(0.000000000000001)
+					 game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Freefall")
+					wait(0.000000000000001)
+					 game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Landed")
+					wait(0.000000000000001)
+					 game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Running")
+					wait(0.000000000000001)
+					 game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Running")
+					wait(0.000000000000001)
+					 game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Landed")
+					wait(0.000000000000001)
+					 game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Swimming")
+					wait(0.000000000000001)
+				 game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Swimming")
+					wait(0.000000000000001)
+					 game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Running")
+					wait(0.000000000000001)
+					 game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Landed")
+					wait(0.000000000000001)
+                until (not longjumpval)
+            end)
+        else
+            workspace.Gravity = 196.19999694824
+            return
+        end
+    end
+})
+
+local AnticheatDisabler = COB("Render", {
+    Name = "CursorFix",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = "fixes cursor in old bedwars"
+})
+
+local AnticheatDisabler = COB("Render", {
+    Name = "CameraFix2",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = "fixes camera"
+})
+
+local AnticheatDisabler = COB("Blatant", {
+    Name = "Invisible",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = false
+})
+
+local AnticheatDisabler = COB("Blatant", {
+    Name = "MultiAura",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = false
+})
+
+local AnticheatDisabler = COB("Blatant", {
+    Name = "TPAuraDisabled",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = false
+})
+
+local AnticheatDisabler = COB("Blatant", {
+    Name = "Peal TP",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = false
+})
+
+local AnticheatDisabler = COB("Blatant", {
+    Name = "Peal TP Bed",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = "tps to a bed without buying a pearl"
+})
+
+local AnticheatDisabler = COB("Blatant", {
+    Name = "Zipline Fly",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = false
+})
+
+local AnticheatDisabler = COB("Utility", {
+    Name = "Dupe",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = false
+})
+
+local AnticheatDisabler = COB("Utility", {
+    Name = "DupeAll",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = false
+})
+
+local AnticheatDisabler = COB("Utility", {
+    Name = "ClientCrasher",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = "crash all lol"
+})
+
+local AnticheatDisabler = COB("Utility", {
+    Name = "DroneExploit",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = "Collects everything with a drone, not requering the p2w kit"
+})
+
+local AnticheatDisabler = COB("Utility", {
+    Name = "FourBigGuysExploit",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = "lol"
+})
+
+local AnticheatDisabler = COB("Utility", {
+    Name = "ZiplineTP",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = "tps to nearest zipline placement humanoid"
+})
+
+local AnticheatDisabler = COB("Utility", {
+    Name = "ZiplineTesing",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = false
+})
+
+local AnticheatDisabler = COB("Utility", {
+    Name = "ProjectileExploit",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = "tps projectiles at everyone"
+})
+
+local AntiCrash = COB("Utility", {
+    Name = "PlayerCrasher",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AntiCrash = true
+            while wait(1.5) do
+                if not ScriptSettings.AntiCrash == true then return end
+                if game:GetService("Workspace"):GetRealPhysicsFPS() < ScriptSettings.AntiCrash_MinFps then
+                    game:Shutdown()
+                    boxnotify("FPS Are under minimum. Closed game.")
+                end  
+                if math.floor(tonumber(game:GetService("Stats"):FindFirstChild("PerformanceStats").Ping:GetValue())) > ScriptSettings.AntiCrash_MaxPing then
+                    game:Shutdown()
+		    boxnotify("Ping Are over maximum. Closed game.")
+                end
+            end       
+        else
+            ScriptSettings.AntiCrash = false
+        end
+    end,
+    Default = false,
+    HoverText = "Crashes player of your choice."
+})
+AntiCrash.CreateSlider({
+    ["Name"] = "Requests to crash",
+    ["Min"] = 0,
+    ["Max"] = 100,
+    ["Function"] = function(val)
+        ScriptSettings.AntiCrash_MinFps = val
+    end,
+    ["HoverText"] = "Minimum fps before closing roblox",
+    ["Default"] = 10
+})
+AntiCrash.CreateSlider({
+    ["Name"] = "Players",
+    ["Min"] = 1,
+    ["Max"] = 3,
+    ["Function"] = function(val)
+        ScriptSettings.AntiCrash_MaxPing = val
+    end,
+    ["HoverText"] = "Minimum fps before closing roblox",
+    ["Default"] = 10
+})
+
+local AnticheatDisabler = COB("Utility", {
+    Name = "AntiCrash",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = false
+})
+
+local AnticheatDisabler = COB("Utility", {
+    Name = "Collect All Drops",
+    Function = function(callback) 
+        if callback then
+            ScriptSettings.AnticheatDisabler = true
+        else
+            ScriptSettings.AnticheatDisabler = false
+        end
+    end,
+    Default = false,
+    HoverText = false
+})
